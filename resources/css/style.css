@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -17,11 +17,12 @@ body {
 .hero-background {
     overflow: hidden;
     position: relative;
-    background: -webkit-linear-gradient(50deg, rgb(30, 50, 50), rgb(60, 50, 30));
-    background: linear-gradient(117deg, rgb(96, 87, 246), rgb(216, 71, 99));
-    background: -webkit-radial-gradient(rgb(194, 74, 126), rgb(105, 86, 235));
-    background: radial-gradient(rgb(30, 50, 60), rgb(70, 60, 150));
-}
+    background: -moz-linear-gradient(45deg, rgba(194,218,251,1) 0%, rgba(55,114,193,1) 24%, rgba(35,81,144,1) 66%, rgba(22,74,144,1) 91%, rgba(15,60,120,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(194,218,251,1) 0%, rgba(55,114,193,1) 24%, rgba(35,81,144,1) 66%, rgba(22,74,144,1) 91%, rgba(15,60,120,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(194,218,251,1) 0%, rgba(55,114,193,1) 24%, rgba(35,81,144,1) 66%, rgba(22,74,144,1) 91%, rgba(15,60,120,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(194,218,251,1) 0%, rgba(55,114,193,1) 24%, rgba(35,81,144,1) 66%, rgba(22,74,144,1) 91%, rgba(15,60,120,1) 100%);
+    background: linear-gradient(45deg, rgba(194,218,251,1) 0%, rgba(55,114,193,1) 24%, rgba(35,81,144,1) 66%, rgba(22,74,144,1) 91%, rgba(15,60,120,1) 100%);
+    }
 
 .bold {
     font-weight: 600;
@@ -34,7 +35,7 @@ body {
 
 .header {
     width: 100%;
-    height: 70px;
+    min-height: 70px;
     position: relative;
     z-index: 999;
     border-bottom-left-radius: 10px;
@@ -69,10 +70,10 @@ body {
 
 
 .logo {
-    max-width: 100px;
+    max-width: 200px;
     padding-left: 0;
     padding-top: 5px;
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 .header-btn {
@@ -120,6 +121,14 @@ body {
     margin-left: 30px;
 }
 
+.hero-right ul {
+    margin-top: 15px;
+}
+
+.hero-right ul li {
+    font-size: 1.7rem;
+}
+
 .mouse:hover {
     transform: translateY(5px);
 }
@@ -136,11 +145,39 @@ body {
 
 .ipad {
     display: none;
+    padding: 0;
+    background: url("https://fluix.io/fluix-cms/wp-content/themes/fluix/img/product/hero-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+}
+
+.ipad img {
+    height: 427px;
+    border-radius: 25px;
+    max-width: 100%;
+    opacity: .5;
 }
 
 .ipad-screen {
     display: none;
 }
+
+.ipad p {
+    position: relative;
+    top: 100px;
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    max-width: 85%;
+    margin: 0 auto;
+    letter-spacing: 1.1;
+    line-height: 1.4;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
 
 
 .hero-btn {
@@ -153,7 +190,15 @@ body {
     height: 51px;
     color: white;
     margin: 30px auto;
+    display: none;
 }
+
+.ipad-btn {
+    display: block;
+    top: 160px;
+    position: relative;
+}
+
 
 p.header-running-text -light{
     font-size: 2rem;
@@ -196,7 +241,7 @@ p.header-running-text -light{
 }
 
 .features-section {
-    background-color: black;
+    background-color: #fff;
     padding-top: 40px;
     padding-bottom: 80px;
     text-align: center;
@@ -210,7 +255,7 @@ p.header-running-text -light{
 }
 
 .features-container {
-    max-width: 830px;
+    max-width: 1500px;
     margin: auto;
 }
 
@@ -248,23 +293,27 @@ p.header-running-text -light{
 .feature-icon {
     background-color: white;
     border-radius: 50%;
-    height: 5.625em;
-    width: 5.625em;
+    height: 150px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     box-shadow: 4px 14px 28px #393939;
+    border: 1px solid rgba(22,74,144,.3);
 }
 
 .feature-head-text {
-    color: white;
+    color: rgba(22,74,144,1);
     padding-top: 15px;
+    text-transform: uppercase;
 }
 
 .feature-subtext {
-    color: white;
+    color: rgba(22,74,144,1);
     padding-top: 0;
+    line-height: 1.4;
+    font-size: 1.7rem;
 }
 
 .feature-img {
@@ -512,7 +561,7 @@ ul {
 }
 
 .footer {
-    background-color: #464646;
+    background-color: #f3f3f3;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -542,3 +591,49 @@ ul {
     position: absolute;
     max-width: 1280px;
 }
+
+.digital-section {
+    text-align: center;
+    position: relative;
+    height: 700px;
+    border: 1px solid black;
+    background: url("http://loyalty360.org/uploads/docs/career-center/Digital_transformation_artcile_pic.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+}
+
+.digital-section h1,h3 {
+    color: #000;
+    line-height: 1.3;
+    letter-spacing: 1.1;
+}
+
+
+.opacity {
+	background:rgba(22,74,144,.7);
+    height: 100%;
+}
+
+.opacity h1 {
+    font-size: 6rem;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+.opacity h3 {
+    font-size: 3.1rem;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1;
+    color: darkgray;
+}
+
+
+
+
+
+
+
