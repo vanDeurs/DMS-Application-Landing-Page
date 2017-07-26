@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -32,14 +32,16 @@ body {
     font-weight: 300;
 }
 
+.row {
+    margin-right: 0;
+}
+
 
 .header {
     width: 100%;
     min-height: 70px;
     position: relative;
     z-index: 999;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     background-color: #f3f3f3;
     padding-top: 20px;
     
@@ -562,25 +564,24 @@ ul {
 
 .footer {
     background-color: #f3f3f3;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background: rgba(50,50,50,.9);
+    padding: 10px 0;
 }
 
-.webscope-text {
-    color: white;
-    font-size: 12px;
-    padding-right: 7px;
-}
 
 .webscope {
     text-align: center;
-    margin-top: -5px;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .social-links {
     float: none;
     text-align: center;
     padding-top: 10px;
+    border: 1px solid red;
 }
 
 .social-link {
@@ -595,12 +596,13 @@ ul {
 .digital-section {
     text-align: center;
     position: relative;
-    height: 700px;
-    border: 1px solid black;
-    background: url("http://loyalty360.org/uploads/docs/career-center/Digital_transformation_artcile_pic.jpg");
+    background: url(../images/hand.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: none;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    min-height: 600px;
 }
 
 .digital-section h1,h3 {
@@ -609,26 +611,62 @@ ul {
     letter-spacing: 1.1;
 }
 
-
 .opacity {
 	background:rgba(22,74,144,.7);
     height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-left: 15px;
 }
 
 .opacity h1 {
-    font-size: 6rem;
+    font-size: 6.5rem;
     padding: 0;
     margin: 0;
     margin-top: 30px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: rgba(20,20,20,1);
 }
 .opacity h3 {
-    font-size: 3.1rem;
+    font-size: 4rem;
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1;
-    color: darkgray;
+     color: rgba(200,200,200,.9);
+    font-weight: 600;
+}
+.opacity .col-xs-12 {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.opacity ul {
+    text-align: left;
+    display: inline-flex;
+    flex-direction: column;
+    max-width: 60%;
+    
+}
+
+.opacity ul li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 3.2rem;
+    color: rgba(0,0,0,.9);
+    margin-top: 15px;
+    text-shadow:
+    -.5px -.5px 0 rgba(100,100,100,.9),
+    -.5px -.5px 0  rgba(100,100,100,.9),
+    -.5px .5px 0  rgba(100,100,100,.9),
+    .5px .5px 0   rgba(100,100,100,.9);
+}
+
+.opacity ul li span {
+    font-size: 3.5rem;
+    color: rgba(200,200,200,.9);
+    text-shadow: none;
 }
 
 
