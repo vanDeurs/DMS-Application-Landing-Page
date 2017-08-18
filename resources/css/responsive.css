@@ -5,7 +5,6 @@
     .header-right {
         display: block;
         float: right;
-        padding: 6px 20px;
     }
 
     .header-headline {
@@ -24,6 +23,7 @@
 
     .hero {
         padding-bottom: 230px;
+        padding-top: 30px;
     }
 
     .hero-button {

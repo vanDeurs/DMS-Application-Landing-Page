@@ -36,30 +36,58 @@ body {
     margin-right: 0;
 }
 
-
-.header {
-    width: 100%;
-    min-height: 70px;
-    position: relative;
-    z-index: 999;
-    background-color: #f3f3f3;
-    padding-top: 20px;
+#dropdown {
     
 }
-
-.header-right {
+.header {
+    width: 100%;
+    min-height: 60px;
+    position: relative;
+    z-index: 999;
+    padding: 20px 0;
+    border-bottom: 1px solid #f3f3f3;
+    
+}
+.header-right ul{
     display: flex;
     flex-direction: row;
-    margin-right: 15px;
+    margin-right: 50px;
+    align-items: center;
 }
 
-.header-right a, .header-right p {
+.header-right ul li a {
+    padding-top: 13px;
+    text-decoration: none;
+    color: #f3f3f3;
     display: inline-flex;
-    margin-right: 15px;
-    font-size: 1.5rem;
-    color: rgba(0,0,0,.8);
+    font-size: 1.9rem;
+    padding-bottom: 5px;
+}
+.header-right ul li {
+    margin-right: 30px;
 }
 
+.header-right ul li a:hover{
+    color: #0ABCEB;
+}
+.menu:after {
+  display:block;
+  content: '';
+  border-top: solid 2px #fff;
+  transform: scaleX(0);  
+  transition: transform 350ms ease-in-out;
+  transform-origin:100% 0%
+}
+.menu:hover:after { 
+  transform: scaleX(1);
+  transform-origin:0% 100%;
+  border-color: #0ABCEB;
+}
+
+#dropdown a { /* Show when on mobile */
+    display: none;
+    font-size: 2rem;
+}
 .container-fluid {
     padding: 0;
     margin: 0;
@@ -69,15 +97,34 @@ body {
     padding: 0;
     margin: 0;
 }
-
-
 .logo {
-    max-width: 200px;
     padding-left: 0;
-    padding-top: 5px;
+    padding-top: 23px;
     margin-left: 60px;
+    font-size: 4rem;
 }
 
+@media only screen and (max-width: 1078px){
+    .logo {
+        font-size: 3rem;
+        margin-left: 40px;
+    }
+    .header-right ul li a{
+        font-size: 1.65rem;
+    }
+    .header-right ul li a{
+        margin-right: 0;
+    }
+    .header {
+        padding: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 941px){
+    .logo {
+        font-size: 2rem;
+    }   
+}
 .header-btn {
     background-color: #0ABCEB;
     border-radius: 10px;
@@ -180,6 +227,17 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+@media only screen and (max-width: 1445px){
+    .ipad p {
+        top: 60px;
+    }
+    .ipad-btn {
+        top: 0;
+    }
+    .ipad p {
+        font-size: 2.5rem;
+    }
+}
 
 
 .hero-btn {
@@ -191,8 +249,9 @@ body {
     width: 210px;
     height: 51px;
     color: white;
-    margin: 30px auto;
+    margin: 10px auto;
     display: none;
+    top: 0;
 }
 
 .ipad-btn {
@@ -217,6 +276,10 @@ p.header-running-text -light{
     box-shadow: -1px 9px 46px -17px rgba(43, 43, 43, 1);
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 .header-headline {
     padding-top: 0;
     padding-bottom: 15px;
@@ -226,7 +289,7 @@ p.header-running-text -light{
 .header-running-text {
     text-align: center;
     max-width: 500px;
-    line-height: 1;
+    line-height: 1.4;
     font-size: 1.5rem;
     margin: auto;
     font-weight: 400;
@@ -242,6 +305,60 @@ p.header-running-text -light{
     max-width: 100%;
 }
 
+@media only screen and (max-width: 768px){
+    .header-running-text{
+        line-height: 1.5;
+        font-size: 1.9rem;
+        max-width: 600px;
+    }
+    .logo {
+        display: none;
+    }
+    .header-right ul {
+        margin: 0 auto;
+        float: right;
+    }
+    .hero-right {
+        margin-left: 15px;
+    }
+    #header-ul {
+        padding: 0;
+    }
+    #header-ul li {
+        font-size: 2.2rem;
+        padding: 2px 0;
+    }
+    #contact-us {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+}
+@media only screen and (max-width: 535px){
+    .header-right ul li a {
+        font-size: 1.3rem;
+        padding: 5px 0 0 0;
+    }   
+    .header-running-text{
+        line-height: 1.35;
+        font-size: 1.9rem;
+        max-width: 600px;
+    }
+    .header-right ul {
+        margin: 0 auto;
+        float: right;
+    }
+    #header-ul li {
+        font-size: 1.9rem;
+    }
+    #contact-us {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+    .feature {
+        padding: 5px;
+    }
+}
+
 .features-section {
     background-color: #fff;
     padding-top: 40px;
@@ -252,8 +369,10 @@ p.header-running-text -light{
 }
 
 .features-headline {
-    color: white;
-    padding-bottom: 30px;
+    color: #333;
+    padding-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
 }
 
 .features-container {
@@ -563,29 +682,27 @@ ul {
 }
 
 .footer {
-    background-color: #f3f3f3;
-    background: rgba(50,50,50,.9);
-    padding: 10px 0;
+    padding: 30px 0;
+    border-top: 1px solid rgba(100,100,100,.5);
 }
-
 
 .webscope {
     text-align: center;
-    color: white;
-    font-size: 2rem;
+    color: #444;
+    font-size: 1.7rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    padding-top: 15px;
 }
 
 .social-links {
     float: none;
     text-align: center;
     padding-top: 10px;
-    border: 1px solid red;
 }
 
 .social-link {
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
 .strips {
@@ -593,81 +710,136 @@ ul {
     max-width: 1280px;
 }
 
+.social-links img {
+    height: 40px;
+    width: 40px;
+}
+
 .digital-section {
     text-align: center;
     position: relative;
-    background: url(../images/hand.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: none;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    min-height: 600px;
+    padding-bottom: 60px;
+    width: 90%;
+    margin: 0 auto;
+    border-top: 1px solid #333;
 }
 
-.digital-section h1,h3 {
-    color: #000;
-    line-height: 1.3;
-    letter-spacing: 1.1;
-}
-
-.opacity {
-	background:rgba(22,74,144,.7);
-    height: 100%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    margin-left: 15px;
-}
 
 .opacity h1 {
-    font-size: 6.5rem;
+    font-size: 5rem;
     padding: 0;
     margin: 0;
     margin-top: 30px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 500;
-    color: rgba(20,20,20,1);
+    color: rgba(40,40,40,.9);
+    letter-spacing: 1.3;
 }
 .opacity h3 {
-    font-size: 4rem;
+    font-size: 3.3rem;
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1;
-     color: rgba(200,200,200,.9);
+     color: rgba(100,100,100,.9);
     font-weight: 600;
-}
-.opacity .col-xs-12 {
-    width: 100%;
-    border-radius: 25px;
 }
 
 .opacity ul {
     text-align: left;
     display: inline-flex;
     flex-direction: column;
-    max-width: 60%;
+    width: 70%;
     
 }
 
 .opacity ul li {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
-    font-size: 3.2rem;
-    color: rgba(0,0,0,.9);
+    font-family: 'Slabo 27px', serif;
+    font-size: 2.5rem;
+    color: rgba(50,50,50,.9);
     margin-top: 15px;
-    text-shadow:
-    -.5px -.5px 0 rgba(100,100,100,.9),
-    -.5px -.5px 0  rgba(100,100,100,.9),
-    -.5px .5px 0  rgba(100,100,100,.9),
-    .5px .5px 0   rgba(100,100,100,.9);
+    border-bottom: 1.3px dotted #0ABCEB;
+    padding: 15px 0;
+}
+.opacity ul li:first-child{
+    border-top: 1.3px dotted #0ABCEB;
 }
 
 .opacity ul li span {
-    font-size: 3.5rem;
-    color: rgba(200,200,200,.9);
+    font-size: 4rem;
+    color: #0ABCEB;
     text-shadow: none;
 }
+
+.opacity hr {
+    border-color: #999;
+    border-radius: 25px;
+    margin: 10px 0;
+    width: 300px;
+    border-width: 2px;
+    margin-left: 0;
+    
+}
+
+.col-md-12{
+    padding-right: 0;
+}
+
+@media only screen and (max-width: 968px){
+    .digital-section {
+        width: 100%;
+    }
+    .opacity ul{
+        width: 90%;
+        padding-left: 15px;
+    }
+    .opacity ul li{
+        font-size: 1.8rem;
+        padding: 5px;
+    }
+    .opacity h1{
+        font-size: 3.7rem;
+    }
+    .opacity h3{
+        font-size: 2.6rem;
+    }
+    .opacity ul li span {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .opacity ul{
+        width: 100%;
+    }
+    .opacity ul li{
+        padding: 0px;
+        margin-top: 3px;
+        border-bottom: none;
+    }
+    .opacity h1{
+        font-size: 3.4rem;
+    }
+    .opacity h3{
+        font-size: 2.3rem;
+    }
+    .opacity ul li:first-child{
+        border-top: none;
+    }
+    .opacity h1 {
+        margin-top: 15px;
+    }
+    
+}
+
+
+
+
+
+
 
 
 
